@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import '@/assets/styles/globals.css';
 
 export const metadata = {
@@ -13,7 +14,8 @@ const MainLayout = ({ children }) => {
     <html lang='en'>
       <body>
         <Navbar />
-        <div>{children}</div>
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
