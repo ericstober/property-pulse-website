@@ -196,9 +196,6 @@ const Navbar = () => {
                       role='menuitem'
                       tabIndex='-1'
                       id='user-menu-item-0'
-                      onClick={() => {
-                        setIsProfileMenuOpen(false);
-                      }}
                     >
                       Your Profile
                     </Link>
@@ -209,9 +206,6 @@ const Navbar = () => {
                       role='menuitem'
                       tabIndex='-1'
                       id='user-menu-item-2'
-                      onClick={() => {
-                        setIsProfileMenuOpen(false);
-                      }}
                     >
                       Saved Properties
                     </Link>
@@ -221,10 +215,6 @@ const Navbar = () => {
                       role='menuitem'
                       tabIndex='-1'
                       id='user-menu-item-2'
-                      onClick={() => {
-                        setIsProfileMenuOpen(false);
-                        signOut();
-                      }}
                     >
                       Sign Out
                     </button>
