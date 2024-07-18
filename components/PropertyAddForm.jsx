@@ -472,7 +472,7 @@ const PropertyAddForm = () => {
                 checked={fields.amenities.includes("High Speed Internet")}
                 onChange={handleAmenitiesChange}
               />
-              <label htmlFor='amenity_coffee_maker'>High Speed Internet</label>
+              <label htmlFor='amenity_high_speed_internet'>High Speed Internet</label>
             </div>
 
             <div>
@@ -485,7 +485,7 @@ const PropertyAddForm = () => {
                 checked={fields.amenities.includes("Outdoor Grill/BBQ")}
                 onChange={handleAmenitiesChange}
               />
-              <label htmlFor='amenity_coffee_maker'>Outdoor Grill/BBQ</label>
+              <label htmlFor='amenity_outdoor_grill_bbq'>Outdoor Grill/BBQ</label>
             </div>
 
             <div>
@@ -498,7 +498,7 @@ const PropertyAddForm = () => {
                 checked={fields.amenities.includes("Fireplace")}
                 onChange={handleAmenitiesChange}
               />
-              <label htmlFor='amenity_coffee_maker'>Fireplace</label>
+              <label htmlFor='amenity_fireplace'>Fireplace</label>
             </div>
 
             <div>
@@ -511,7 +511,7 @@ const PropertyAddForm = () => {
                 checked={fields.amenities.includes("Beach Access")}
                 onChange={handleAmenitiesChange}
               />
-              <label htmlFor='amenity_coffee_maker'>Beach Access</label>
+              <label htmlFor='amenity_beach_access'>Beach Access</label>
             </div>
 
             <div>
@@ -524,7 +524,7 @@ const PropertyAddForm = () => {
                 checked={fields.amenities.includes("Hiking Trails Access")}
                 onChange={handleAmenitiesChange}
               />
-              <label htmlFor='amenity_coffee_maker'>Hiking Trails Access</label>
+              <label htmlFor='amenity_hiking_trails_access'>Hiking Trails Access</label>
             </div>
 
             <div>
@@ -537,7 +537,7 @@ const PropertyAddForm = () => {
                 checked={fields.amenities.includes("Pet Friendly")}
                 onChange={handleAmenitiesChange}
               />
-              <label htmlFor='amenity_coffee_maker'>Pet Friendly</label>
+              <label htmlFor='amenity_pet_friendly'>Pet Friendly</label>
             </div>
 
             <div>
@@ -550,7 +550,7 @@ const PropertyAddForm = () => {
                 checked={fields.amenities.includes("Ski Equipment Storage")}
                 onChange={handleAmenitiesChange}
               />
-              <label htmlFor='amenity_coffee_maker'>Ski Equipment Storage</label>
+              <label htmlFor='amenity_ski_equipment_storage'>Ski Equipment Storage</label>
             </div>
 
             <div>
@@ -563,7 +563,7 @@ const PropertyAddForm = () => {
                 checked={fields.amenities.includes("Mountain View")}
                 onChange={handleAmenitiesChange}
               />
-              <label htmlFor='amenity_coffee_maker'>Mountain View</label>
+              <label htmlFor='amenity_mountain_view'>Mountain View</label>
             </div>
           </div>
         </div>
