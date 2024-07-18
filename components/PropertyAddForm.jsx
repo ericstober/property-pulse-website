@@ -275,6 +275,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_wifi'>Wifi</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -287,6 +288,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_kitchen'>Full kitchen</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -299,6 +301,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_washer_dryer'>Washer & Dryer</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -311,6 +314,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_free_parking'>Free Parking</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -323,6 +327,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_pool'>Swimming Pool</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -335,6 +340,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_hot_tub'>Hot Tub</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -347,6 +353,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_24_7_security'>24/7 Security</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -361,6 +368,7 @@ const PropertyAddForm = () => {
                 Wheelchair Accessible
               </label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -373,6 +381,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_elevator_access'>Elevator Access</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -385,6 +394,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_dishwasher'>Dishwasher</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -399,6 +409,7 @@ const PropertyAddForm = () => {
                 Gym/Fitness Center
               </label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -411,6 +422,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_air_conditioning'>Air Conditioning</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -423,6 +435,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_balcony_patio'>Balcony/Patio</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -435,6 +448,7 @@ const PropertyAddForm = () => {
               />
               <label htmlFor='amenity_smart_tv'>Smart TV</label>
             </div>
+
             <div>
               <input
                 type='checkbox'
@@ -446,6 +460,110 @@ const PropertyAddForm = () => {
                 onChange={handleAmenitiesChange}
               />
               <label htmlFor='amenity_coffee_maker'>Coffee Maker</label>
+            </div>
+
+            <div>
+              <input
+                type='checkbox'
+                id='amenity_high_speed_internet'
+                name='amenities'
+                value='High Speed Internet'
+                className='mr-2'
+                checked={fields.amenities.includes("High Speed Internet")}
+                onChange={handleAmenitiesChange}
+              />
+              <label htmlFor='amenity_coffee_maker'>High Speed Internet</label>
+            </div>
+
+            <div>
+              <input
+                type='checkbox'
+                id='amenity_outdoor_grill_bbq'
+                name='amenities'
+                value='Outdoor Grill/BBQ'
+                className='mr-2'
+                checked={fields.amenities.includes("Outdoor Grill/BBQ")}
+                onChange={handleAmenitiesChange}
+              />
+              <label htmlFor='amenity_coffee_maker'>Outdoor Grill/BBQ</label>
+            </div>
+
+            <div>
+              <input
+                type='checkbox'
+                id='amenity_fireplace'
+                name='amenities'
+                value='Fireplace'
+                className='mr-2'
+                checked={fields.amenities.includes("Fireplace")}
+                onChange={handleAmenitiesChange}
+              />
+              <label htmlFor='amenity_coffee_maker'>Fireplace</label>
+            </div>
+
+            <div>
+              <input
+                type='checkbox'
+                id='amenity_beach_access'
+                name='amenities'
+                value='Beach Access'
+                className='mr-2'
+                checked={fields.amenities.includes("Beach Access")}
+                onChange={handleAmenitiesChange}
+              />
+              <label htmlFor='amenity_coffee_maker'>Beach Access</label>
+            </div>
+
+            <div>
+              <input
+                type='checkbox'
+                id='amenity_hiking_trails_access'
+                name='amenities'
+                value='Hiking Trails Access'
+                className='mr-2'
+                checked={fields.amenities.includes("Hiking Trails Access")}
+                onChange={handleAmenitiesChange}
+              />
+              <label htmlFor='amenity_coffee_maker'>Hiking Trails Access</label>
+            </div>
+
+            <div>
+              <input
+                type='checkbox'
+                id='amenity_pet_friendly'
+                name='amenities'
+                value='Pet Friendly'
+                className='mr-2'
+                checked={fields.amenities.includes("Pet Friendly")}
+                onChange={handleAmenitiesChange}
+              />
+              <label htmlFor='amenity_coffee_maker'>Pet Friendly</label>
+            </div>
+
+            <div>
+              <input
+                type='checkbox'
+                id='amenity_ski_equipment_storage'
+                name='amenities'
+                value='Ski Equipment Storage'
+                className='mr-2'
+                checked={fields.amenities.includes("Ski Equipment Storage")}
+                onChange={handleAmenitiesChange}
+              />
+              <label htmlFor='amenity_coffee_maker'>Ski Equipment Storage</label>
+            </div>
+
+            <div>
+              <input
+                type='checkbox'
+                id='amenity_mountain_view'
+                name='amenities'
+                value='Mountain View'
+                className='mr-2'
+                checked={fields.amenities.includes("Mountain View")}
+                onChange={handleAmenitiesChange}
+              />
+              <label htmlFor='amenity_coffee_maker'>Mountain View</label>
             </div>
           </div>
         </div>
