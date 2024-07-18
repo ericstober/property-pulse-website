@@ -2,12 +2,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 import { fetchProperty } from "@/utils/request";
 import PropertyHeaderImage from "@/components/PropertyHeaderImage";
-import Link from "next/link";
 import PropertyDetails from "@/components/PropertyDetails";
-import {FaArrowLeft} from 'react-icons/fa';
+import PropertyImages from "@/components/PropertyImages";
 import Spinner from "@/components/Spinner";
+import {FaArrowLeft} from 'react-icons/fa';
 
 const PropertyPage = () => {
   const { id } = useParams();
@@ -156,6 +157,7 @@ const PropertyPage = () => {
               </div>
             </div>
           </section>
+          <PropertyImages images={property.images} />
         </>
       )}
     </>
