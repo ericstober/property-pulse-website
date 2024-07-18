@@ -1,5 +1,6 @@
 import connectDB from "@/config/database";
 import Property from "@/models/Property";
+import { getSessionUser } from "@/utils/getSessionUser";
 
 // GET /api/properties
 export const GET = async (request) => {
@@ -17,6 +18,16 @@ export const GET = async (request) => {
 
 export const POST = async (request) => {
   try {
+    await connectDB();
+
+    const sessionUser = await getSessionUser();
+
+    if (!sessionUser || !sessionUser.userId) {
+      return new Response("User ID is required", { status: 401 });
+    }
+
+    const { userId } = sessionUser;
+
     const formData = await request.formData();
 
     // Access all values from amenities and images
@@ -50,6 +61,7 @@ export const POST = async (request) => {
         email: formData.get("seller_info.email"),
         phone: formData.get("seller_info.phone"),
       },
+      owner: userId,
       images,
     };
 
