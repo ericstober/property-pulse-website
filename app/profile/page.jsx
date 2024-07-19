@@ -42,9 +42,29 @@ const ProfilePage = () => {
     }
   }, [session]);
 
-  const handleDeleteProperty = () => {
+  const handleDeleteProperty = async (propertyId) => {
+    const confirmed = window.confirm("Are you sure you want to delete this property?");
 
-  }
+    if (!confirmed) return;
+
+    try {
+      const res = await fetch(`/api/properties/${propertyId}`, { method: 'DELETE' });
+
+      if (res.status === 200) {
+        // Remove the property from state
+        const updatedProperties = properties.filter((property) => property._id !== propertyId);
+
+        setProperties(updatedProperties);
+
+        alert('Property Deleted');
+      } else {
+        alert('Failed to delete property');
+      }
+    } catch (error) {
+      console.log(error)
+      alert('Failed to delete property');
+    }
+  };
 
   return (
     <section className='bg-blue-50'>
@@ -93,7 +113,10 @@ const ProfilePage = () => {
                     </Link>
                     <div className='mt-2'>
                       <p className='text-lg font-semibold'>{property.name}</p>
-                      <p className='text-gray-600'>Address: {property.location.street} {property.location.city} {property.location.state}</p>
+                      <p className='text-gray-600'>
+                        Address: {property.location.street}{" "}
+                        {property.location.city} {property.location.state}
+                      </p>
                     </div>
                     <div className='mt-2'>
                       <Link
