@@ -7,8 +7,9 @@ import { fetchProperty } from "@/utils/request";
 import PropertyHeaderImage from "@/components/PropertyHeaderImage";
 import PropertyDetails from "@/components/PropertyDetails";
 import PropertyImages from "@/components/PropertyImages";
+import BookmarkButton from "@/components/BookmarkButton";
 import Spinner from "@/components/Spinner";
-import {FaArrowLeft} from 'react-icons/fa';
+import { FaArrowLeft } from "react-icons/fa";
 
 const PropertyPage = () => {
   const { id } = useParams();
@@ -59,7 +60,7 @@ const PropertyPage = () => {
                 href='/properties'
                 className='text-blue-500 hover:text-blue-600 flex items-center'
               >
-                <FaArrowLeft className="mr-2" /> Back to Properties
+                <FaArrowLeft className='mr-2' /> Back to Properties
               </Link>
             </div>
           </section>
@@ -72,9 +73,7 @@ const PropertyPage = () => {
 
                 {/* Sidebar */}
                 <aside className='space-y-4'>
-                  <button className='bg-blue-500 hover:bg-blue-600 text-white font-bold w-full py-2 px-4 rounded-full flex items-center justify-center'>
-                    <i className='fas fa-bookmark mr-2'></i> Bookmark Property
-                  </button>
+                  <BookmarkButton property={property} />
                   <button className='bg-orange-500 hover:bg-orange-600 text-white font-bold w-full py-2 px-4 rounded-full flex items-center justify-center'>
                     <i className='fas fa-share mr-2'></i> Share Property
                   </button>
