@@ -33,7 +33,7 @@ const PropertyMap = ({ property }) => {
           `${property.location.street} ${property.location.city} ${property.location.state} ${property.location.zipcode}`
         );
 
-        //  Check for results
+        // Check for results
         if (res.results.length === 0) {
           // No results found
           setGeocodeError(true);
