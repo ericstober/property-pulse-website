@@ -1,19 +1,19 @@
-import { Schema, model, model } from "mongoose";
+import { Schema, model, models } from "mongoose";
 
 const MessageSchema = new Schema(
   {
     sender: {
-      type: Schema.Type.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
     recipient: {
-      type: Schema.Type.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
     property: {
-      type: Schema.Type.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "Property",
       required: true,
     },
