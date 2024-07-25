@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { FaPaperPlane } from "react-icons/fa";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
+import { useSession } from "next-auth/react";
 
 const PropertyContactForm = ({ property }) => {
+  const { data: session } = useSession();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -30,28 +32,31 @@ const PropertyContactForm = ({ property }) => {
       });
 
       if (res.status === 200) {
-        toast.success('Message sent successfully');
+        toast.success("Message sent successfully");
         setWasSubmitted(true);
       } else if (res.status === 400 || res.status === 401) {
-        toast.error(data.message);
+        const dataObject = await res.json();
+        toast.error(dataObject.message);
       } else {
-        toast.error('Error sending message');
+        toast.error("Error sending message");
       }
     } catch (error) {
-      console.log(error)
-      toast.error('Error sending message');
+      console.log(error);
+      toast.error("Error sending message");
     } finally {
-      setName('');
-      setEmail('');
-      setPhone('');
-      setMessage('');
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
     }
   };
 
   return (
     <div className='bg-white p-6 rounded-lg shadow-md'>
       <h3 className='text-xl font-bold mb-6'>Contact Property Manager</h3>
-      {wasSubmitted ? (
+      {!session ? (
+        <p>You must be logged in to send a message</p>
+      ) : wasSubmitted ? (
         <p className='text-green-500 mb-4'>
           Your message has been sent successfully
         </p>
