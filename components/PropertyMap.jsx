@@ -1,9 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Map, { Marker } from "react-map-gl";
 import { setDefaults, fromAddress } from "react-geocode";
-import Spinner from "./Spinner";
+import Spinner from "@/components/Spinner";
 import Image from "next/image";
 import pin from "@/assets/images/pin.svg";
 
