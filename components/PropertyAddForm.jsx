@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const PropertyAddForm = () => {
   const [mounted, setMounted] = useState(false);
