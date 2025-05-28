@@ -52,7 +52,3 @@ npm run dev
 - `components/`: Reusable UI components.
 - `public/`: Static assets such as images and fonts.
 - `styles/`: Global styles and Tailwind CSS configurations.
-
-## License
-
-This project is licensed under the MIT License.
